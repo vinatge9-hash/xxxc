@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title NovaChat AI — Docs</title>
+  <meta name="description" content="NovaChat AI developer docs: Getting started, API reference, SDKs, webhooks, security, and best practices." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans bg-white text-gray-900">
+  <header>
+    <nav class="bg-white shadow sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <a href="index.html" class="text-2xl font-semibold font-[Montserrat] text-gray-800">NovaChatAI</a>
+          <div class="hidden md:flex space-x-6">
+            <a href="index.html" class="text-gray-700 hover:text-blue-600">Home</a>
+            <a href="docs.html" class="text-blue-600">Docs</a>
+          </div>
+          <div class="md:hidden"><button id="mobile-menu-button" class="text-gray-800 px-3 py-2 rounded-md">Menu</button></div>
+        </div>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden">
+        <a href="index.html" class="block px-4 py-2 text-sm">Home</a>
+        <a href="docs.html" class="block px-4 py-2 text-sm">Docs</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="py-12">
+    <div class="max-w-7xl mx-auto px-4">
+      <h1 class="font-[Montserrat] text-3xl md:text-4xl font-bold mb-4">Documentation</h1>
+      <p class="text-gray-700 mb-6">Access API references, webhooks, SDKs, and implementation guides to integrate NovaChat AI into your stack.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg shadow p-6">
+          <h2 class="font-semibold mb-2">Getting Started</h2>
+          <p class="text-sm text-gray-600">Authentication, quickstart guides, and project setup.</p>
+        </div>
+        <div class="bg-white rounded-lg shadow p-6">
+          <h2 class="font-semibold mb-2">API Reference</h2>
+          <p class="text-sm text-gray-600">Endpoints for conversations, intents, and analytics.</p>
+        </div>
+        <div class="bg-white rounded-lg shadow p-6">
+          <h2 class="font-semibold mb-2">SDKs</h2>
+          <p class="text-sm text-gray-600">JavaScript, Python, and other client libraries.</p>
+        </div>
+        <div class="bg-white rounded-lg shadow p-6">
+          <h2 class="font-semibold mb-2">Webhooks</h2>
+          <p class="text-sm text-gray-600">Real-time event notifications and integration hooks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-gray-900 text-white py-6">
+    <div class="text-center text-sm">© 2025 NovaChat AI • Docs</div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('mobile-menu-button');
+    const menu = document.getElementById('mobile-menu');
+    if (btn && menu) btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+  </script>
+</body>
+</html>
