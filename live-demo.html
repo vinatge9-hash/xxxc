@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NovaChat AI — Live Demo</title>
+  <meta name="description" content="Interact with a live demo of NovaChat AI. See sample conversations, learn capabilities, and explore quick-start prompts." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans bg-gray-100 text-gray-900">
+  <header>
+    <nav class="bg-white shadow sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <a href="index.html" class="text-2xl font-semibold font-[Montserrat] text-gray-800">NovaChatAI</a>
+          <div class="hidden md:flex space-x-6">
+            <a href="index.html" class="text-gray-700 hover:text-blue-600">Home</a>
+            <a href="live-demo.html" class="text-blue-600">Demo</a>
+            <a href="pricing.html" class="text-gray-700 hover:text-blue-600">Pricing</a>
+          </div>
+          <div class="md:hidden"><button id="mobile-menu-button" class="text-gray-800 px-3 py-2 rounded-md">Menu</button></div>
+        </div>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden">
+        <a href="index.html" class="block px-4 py-2 text-sm">Home</a>
+        <a href="live-demo.html" class="block px-4 py-2 text-sm">Demo</a>
+        <a href="pricing.html" class="block px-4 py-2 text-sm">Pricing</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="min-h-screen flex items-center justify-center" style="background-image: url('https://images.pexels.com/photos/8284731/pexels-photo-8284731.jpeg?auto=compress&cs=tinysrgb&h=650&w=940'); background-size: cover;">
+    <div class="bg-white/70 p-6 rounded-lg shadow-lg max-w-2xl w-full mx-4">
+      <h1 class="font-[Montserrat] text-2xl md:text-3xl font-bold mb-4">Live Demo — NovaChat AI</h1>
+      <p class="mb-4 text-gray-700">Type a message below to see how the bot responds. This is a realistic, interactive preview of conversational flow, intents, and responses.</p>
+      <div class="border rounded-lg p-4 bg-white mb-4 h-96 overflow-auto" id="chat-window" aria-label="Demo chat window">
+        <div class="flex items-end mb-4"><span class="bg-gray-200 text-gray-700 px-3 py-2 rounded-full">Hi there! How can I help you today?</span></div>
+      </div>
+      <form id="demo-form" class="flex gap-2" onsubmit="return false;">
+        <input id="demo-input" class="flex-1 border rounded px-3 py-2" placeholder="Ask NovaChat AI a question..." />
+        <button type="button" id="send-btn" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="bg-gray-900 text-white py-6">
+    <div class="text-center text-sm">© 2025 NovaChat AI • Live Demo</div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('mobile-menu-button');
+    const menu = document.getElementById('mobile-menu');
+    if (btn && menu) btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+
+    const chatWindow = document.getElementById('chat-window');
+    const form = document.getElementById('demo-form');
+    const input = document.getElementById('demo-input');
+    const send = document.getElementById('send-btn');
+
+    function addMessage(sender, text) {
+      const msg = document.createElement('div');
+      msg.className = 'flex justify-' + (sender === 'bot' ? 'start' : 'end') + ' mb-2';
+      const bubble = document.createElement('span');
+      bubble.className = 'px-3 py-2 rounded-lg bg-' + (sender === 'bot' ? 'blue-100' : 'blue-600') + ' text-' + (sender === 'bot' ? 'gray-800' : 'white');
+      bubble.textContent = text;
+      msg.appendChild(bubble);
+      chatWindow.appendChild(msg);
+      chatWindow.scrollTop = chatWindow.scrollHeight;
+    }
+
+    function botResponse(userInput) {
+      // Very lightweight mock responses for demonstration
+      const text = userInput.toLowerCase().includes('hello') ? 'Hello! I am NovaChat AI. How can I assist you today?' :
+                   userInput.toLowerCase().includes('pricing') ? 'Our pricing plans start at a scalable tier for startups and grow with your needs.' :
+                   'That sounds great. Could you tell me a bit more about your use case?';
+      return text;
+    }
+
+    send.addEventListener('click', () => {
+      const userText = input.value.trim();
+      if (!userText) return;
+      addMessage('user', userText);
+      input.value = '';
+      setTimeout(() => {
+        const reply = botResponse(userText);
+        addMessage('bot', reply);
+      }, 400);
+    });
+  </script>
+</body>
+</html>
