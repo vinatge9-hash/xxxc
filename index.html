@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NovaChat AI — Conversational AI for Modern Businesses</title>
+  <meta name="description" content="Showcase NovaChat AI: a modern, conversion-focused website for an AI chatbot product with a live demo, features, pricing, integrations, use cases, docs, and resources." />
+  <!-- Fonts: using Tailwind-compatible arbitrary font utilities with Google Fonts loaded for typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2563EB',
+            accent: '#1D4ED8'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-sans bg-white text-gray-900">
+  <!-- Header / Navigation -->
+  <header>
+    <nav class="bg-white shadow sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <a href="index.html" class="text-2xl font-semibold font-[Montserrat] text-gray-800">NovaChatAI</a>
+          <div class="hidden md:flex space-x-6">
+            <a href="index.html" class="text-gray-700 hover:text-blue-600">Home</a>
+            <a href="features.html" class="text-gray-700 hover:text-blue-600">Features</a>
+            <a href="live-demo.html" class="text-gray-700 hover:text-blue-600">Demo</a>
+            <a href="integrations.html" class="text-gray-700 hover:text-blue-600">Integrations</a>
+            <a href="use-cases.html" class="text-gray-700 hover:text-blue-600">Use Cases</a>
+            <a href="pricing.html" class="text-gray-700 hover:text-blue-600">Pricing</a>
+            <a href="docs.html" class="text-gray-700 hover:text-blue-600">Docs</a>
+            <a href="about.html" class="text-gray-700 hover:text-blue-600">About</a>
+            <a href="contact.html" class="text-gray-700 hover:text-blue-600">Contact</a>
+          </div>
+          <div class="md:hidden">
+            <button id="mobile-menu-button" class="text-gray-800 px-3 py-2 rounded-md">Menu</button>
+          </div>
+        </div>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden">
+        <a href="index.html" class="block px-4 py-2 text-sm">Home</a>
+        <a href="features.html" class="block px-4 py-2 text-sm">Features</a>
+        <a href="live-demo.html" class="block px-4 py-2 text-sm">Demo</a>
+        <a href="integrations.html" class="block px-4 py-2 text-sm">Integrations</a>
+        <a href="use-cases.html" class="block px-4 py-2 text-sm">Use Cases</a>
+        <a href="pricing.html" class="block px-4 py-2 text-sm">Pricing</a>
+        <a href="docs.html" class="block px-4 py-2 text-sm">Docs</a>
+        <a href="about.html" class="block px-4 py-2 text-sm">About</a>
+        <a href="contact.html" class="block px-4 py-2 text-sm">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative min-h-screen bg-cover bg-center" style="background-image: url('https://images.pexels.com/photos/18069694/pexels-photo-18069694.png?auto=compress&cs=tinysrgb&h=650&w=940');">
+    <div class="absolute inset-0 bg-black opacity-40"></div>
+    <div class="relative z-10 max-w-4xl mx-auto text-center py-32 px-6 text-white">
+      <h1 class="font-[Montserrat] text-4xl sm:text-5xl md:text-6xl font-bold mb-4">NovaChat AI — Intelligent Conversational AI for Modern Businesses</h1>
+      <p class="font-[Inter] text-lg md:text-xl mb-8">Create delightful chat experiences with natural language understanding, multi-channel support, and actionable insights.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="live-demo.html" class="bg-blue-600 text-white px-8 py-3 rounded-md hover:bg-blue-700 transition-all">Live Demo</a>
+        <a href="pricing.html" class="bg-white text-blue-600 border border-blue-600 px-8 py-3 rounded-md hover:bg-blue-50 transition-all">Pricing</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Highlights -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-white rounded-lg shadow p-6 flex flex-col items-start gap-4 hover:shadow-xl transition-all">
+        <div class="text-2xl">💬 Natural Language Understanding</div>
+        <p class="text-gray-600">Parse intents accurately and respond with context-aware dialogue.</p>
+      </div>
+      <div class="bg-white rounded-lg shadow p-6 flex flex-col items-start gap-4 hover:shadow-xl transition-all">
+        <div class="text-2xl">🌐 Multi-Channel</div>
+        <p class="text-gray-600">Deploy on web, mobile, and popular messaging platforms with ease.</p>
+      </div>
+      <div class="bg-white rounded-lg shadow p-6 flex flex-col items-start gap-4 hover:shadow-xl transition-all">
+        <div class="text-2xl">📈 Analytics & Insights</div>
+        <p class="text-gray-600">Measure conversations, intents, and conversion impact in one place.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white pt-12 pb-8">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <h3 class="font-[Montserrat] text-xl mb-2">NovaChat AI</h3>
+        <p class="text-gray-300">AI-powered conversational experiences for modern businesses. Fast, scalable, secure.</p>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-2">Quick Links</h4>
+        <ul class="space-y-2 text-gray-300">
+          <li><a href="features.html" class="hover:text-white">Features</a></li>
+          <li><a href="live-demo.html" class="hover:text-white">Live Demo</a></li>
+          <li><a href="pricing.html" class="hover:text-white">Pricing</a></li>
+          <li><a href="docs.html" class="hover:text-white">Docs</a></li>
+          <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-2">Contact</h4>
+        <p class="text-gray-300">hello@novachat.ai</p>
+        <p class="text-gray-300">(555) 012-3456</p>
+      </div>
+    </div>
+    <div class="border-t border-gray-700 mt-6 pt-4"></div>
+    <div class="text-center text-gray-400 text-sm mt-2">© 2025 NovaChat AI. All rights reserved.</div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const btn = document.getElementById('mobile-menu-button');
+    const menu = document.getElementById('mobile-menu');
+    if (btn && menu) {
+      btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+      });
+    }
+  </script>
+</body>
+</html>
